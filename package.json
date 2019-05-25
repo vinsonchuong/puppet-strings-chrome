@@ -15,6 +15,7 @@
     "prepack": "build-esm"
   },
   "dependencies": {
+    "puppet-strings": ">=3.1.1",
     "puppeteer-core": ">=1.17.0"
   },
   "devDependencies": {
@@ -23,7 +24,6 @@
     "flow-bin": "^0.98.1",
     "flow-typed": "^2.5.2",
     "overdub": "^2.3.1",
-    "puppet-strings": "^3.1.1",
     "semantic-release": "^15.13.12",
     "standard-esnext": "^5.3.0"
   },

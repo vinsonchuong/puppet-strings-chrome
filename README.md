@@ -14,6 +14,30 @@ by running:
 yarn add puppet-strings-chrome
 ```
 
+### `openChrome(options)`
+Find a locally installed stable version of Chrome or download it if none
+exists, and then
+[launch it for use with puppet-strings](https://github.com/vinsonchuong/puppet-strings/tree/master/actions/open-browser)
+
+```js
+import { openChrome } from 'puppet-strings-chrome'
+import { openTab } from 'puppet-strings'
+
+async function run() {
+  const browser = await openChrome()
+  const tab = await openTab(browser, 'http:/example.com')
+}
+
+run()
+```
+
+`openChrome()` takes the same options as
+[`openBrowser()`](https://github.com/vinsonchuong/puppet-strings/tree/master/actions/open-browser)
+
+`openChrome()` uses [`findChrome()`](#findchrome) to detect a locally installed
+version of Chrome or Chromium, falling back to using
+[`downloadChrome()`](#downloadchrome) to download a usable version of Chromium.
+
 ### `findChrome()`
 Find the path to a locally installed stable version of Chromium or Google
 Chrome.

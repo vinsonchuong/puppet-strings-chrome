@@ -6,6 +6,9 @@ matrix:
           update: true
           casks:
             - google-chrome
+            - google-chrome-beta
+            - google-chrome-dev
+            - google-chrome-canary
 language: node_js
 node_js: node
 cache: yarn

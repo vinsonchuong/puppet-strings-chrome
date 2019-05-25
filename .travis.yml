@@ -1,4 +1,5 @@
-group: travis_latest
+os:
+  - osx
 language: node_js
 node_js: node
 cache: yarn
@@ -9,8 +10,8 @@ env:
 branches:
   only:
     - master
-deploy:
-  provider: script
-  skip_cleanup: true
-  script:
-  - yarn release
+# deploy:
+#   provider: script
+#   skip_cleanup: true
+#   script:
+#   - yarn release

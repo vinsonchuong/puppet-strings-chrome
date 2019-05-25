@@ -1,7 +1,7 @@
 {
   "name": "puppet-strings-chrome",
   "version": "0.0.0",
-  "description": "An awesome package",
+  "description": "Find or download a version of Chrome for use with puppet-strings",
   "keywords": [],
   "homepage": "https://github.com/vinsonchuong/puppet-strings-chrome",
   "bugs": "https://github.com/vinsonchuong/puppet-strings-chrome/issues",

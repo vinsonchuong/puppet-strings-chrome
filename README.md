@@ -4,7 +4,7 @@
 [![dependencies Status](https://david-dm.org/vinsonchuong/puppet-strings-chrome/status.svg)](https://david-dm.org/vinsonchuong/puppet-strings-chrome)
 [![devDependencies Status](https://david-dm.org/vinsonchuong/puppet-strings-chrome/dev-status.svg)](https://david-dm.org/vinsonchuong/puppet-strings-chrome?type=dev)
 
-An awesome package
+Find or download a version of Chrome for use with puppet-strings
 
 ## Usage
 Install [puppet-strings-chrome](https://yarnpkg.com/en/package/puppet-strings-chrome)

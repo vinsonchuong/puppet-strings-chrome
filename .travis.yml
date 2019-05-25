@@ -13,17 +13,14 @@ matrix:
           update: true
           casks:
             - google-chrome
-    - os: windows
-      before_install:
-        - choco install -y googlechrome
     - os: linux
       dist: xenial
       env:
         global:
         - secure: QA3O5fMFJkbEsFeIDkM6IF+0OECFQPDj8E/xEC+UaRWePjrCB5pwONGe76xrPHQWdz570LNXmxROcMKIoSNWVfbqiuLxnD8jftvkdVhanoJ/TBS5vJy0+HrHGy1OwI2i2f6w/sObDFXk51ycyf/bQjsoxY23NcKiL5qbvcoXtfjnQ/vdLV21MDX0Z3OxS3pevhrZSA2uVhF0AAz168dqQXWrcDhfYTSytBxuiv6ZZBWhetuuF8vuhd9NAt5DbpugK3EYbkcoEydb7ltQonV3WlVnhnXL0qVIy25l+rYSxIQBHX5jRvlV610BB1RNzn706d/w8dNKVTkRUcfVvfoxloIRSNXW5ko3G1lXoug4ONmhos44kT1wcdhqFSpw2s32TfhCeRH0c1ah6Ibw47jF/7a4iBzeCTBavUJ/2/PBLo+EcckJ0uFfPONj5DdokjA+fer7GJIj99HZ7jwBRf9xRXd5Ux74tqdOGU3KT0VNtvFNfc2m7bhrCVr9QBr/NjYaJASgyuIBZlwTbkHxikXK9V8QlFZZHK1J4j1rcZ684xjwkFRrM3IDTuVxPkAghFtayFmW1fpeKGleXKkSIkALeNnqZAKVao0+9SpkmE94hb5zt75IVhmcixSqBMdu3cHC3LJju5Y/6OC8c4+FLDhh2avMDLoQey1RzyOAcb97W98=
         - secure: mLBM/CiNFRq566fbC0iNotnyMWP+5qtE6hiBaszx4ENx7CaQp7FBZaTc4h7u4q1b0Kr9zVRCFfwVENKZQiITDKOHr6cCPd1T1PvhW53x0zlA+KyNAsbFbSAKzEBlx1eUZcBF+rDTrOhZp4wd5jmIOuNit1PyVZT4dVPv+c5Fl/XaGpxCZ7XA4o+NLYVVt4i3TmcNWUJPbX7+TNeaewPheBeffut8NLiYoILmhp80BDe60gvlv30VhfxTckvUhK0YEUU0omoxfGVcq1J5c/NesmiypcLPhI9jn+vvWS6hdzA24q24BI9533In0Ve7zYCMmp84LEXyTjqlFvjfRviUSnGxkcTMsymm3GO0w3yDE/lj0+Z/W2Xwq/cgNJ0c08AVAUFn7n1PdI1p42m3UMhCmunZjLXUHNt+t4trvQMYUGFqd9SdOhfgxm5qWYajSobPZrARgBuD1L2R2ePgO3QGnMx2LRh05Z50uuJQYtKerPz/Pr9Rfee1lu1NYvKtFnguS7pqR/SPisQtonDVOrUi+1RTJlsfWXOWQS6rr45t4zCAD72zoYnaLc1AGN389Fwq28w4AGBbrxxy8PQjQpaCmy9694q3HrgmbrGmh+VxXvFEHSUy9pSTd15IeJil8UJ09uFbEOv18Ca/h6csMyxbP582tl9YP1rsirE1jX4eLrY=
-      # deploy:
-      #   provider: script
-      #   skip_cleanup: true
-      #   script:
-      #   - yarn release
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+        - yarn release

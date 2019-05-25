@@ -25,12 +25,6 @@ export default async function(): Promise<?string> {
     )
   }
 
-  if (process.platform === 'win32') {
-    possiblePaths.push(
-      'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
-    )
-  }
-
   for (const possiblePath of possiblePaths) {
     try {
       await fsp.access(possiblePath, fs.constants.R_OK | fs.constants.X_OK)

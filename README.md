@@ -42,3 +42,23 @@ Only Linux and OSX are supported.
 * `/usr/bin/google-chrome-stable`
 
 If no executables exist at any of these paths, `findChrome` returns `null`
+
+### `downloadChrome()`
+Download a version of Chromium that will work with puppet-strings.
+
+```js
+import { downloadChrome } from 'puppet-strings-chrome'
+
+async function run() {
+  const chromePath = await downloadChrome()
+  console.log(chromePath)
+}
+
+run()
+```
+
+`downloadChrome()` downloads the
+[version of Chromium](https://github.com/GoogleChrome/puppeteer/blob/084cf021195dbe125d26496796f590a4300fb844/package.json#L11)
+compatible with the current version of Puppeteer. Downloads are cached in
+`~/.chromium`. If the version of Chromium is already downloaded, it will not be
+downloaded again.

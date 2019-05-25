@@ -15,7 +15,6 @@
     "prepack": "build-esm"
   },
   "dependencies": {
-    "lsregister": "^1.0.0",
     "puppeteer-core": "^1.17.0"
   },
   "devDependencies": {

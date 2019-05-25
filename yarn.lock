@@ -3375,7 +3375,7 @@ get-stream@^4.0.0:
   dependencies:
     pump "^3.0.0"
 
-get-stream@^5.0.0, get-stream@^5.1.0:
+get-stream@^5.0.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-5.1.0.tgz#01203cdc92597f9b909067c3e656cc1f4d3c4dc9"
   integrity sha512-EXr1FOzrzTfGeL0gQdeFEvOMm2mzMOglyiOXSTpPC+iAjAKftbr3jpCMWynogwYnM+eSj9sHGc6wjIcDvYiygw==
@@ -4677,19 +4677,6 @@ lru-cache@^5.1.1:
   integrity sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==
   dependencies:
     yallist "^3.0.2"
-
-lsregister@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/lsregister/-/lsregister-1.0.0.tgz#59591b35f95812d9340da128c8c64baef6ea6ddf"
-  integrity sha512-qcr0N2Vy8TU46d8mHcMA07Ebd9HC3e94q1HY+8rCdbMdFA5In+gZ9O0uX2ML8twM6htFKoxfREHSEzhImFY0dw==
-  dependencies:
-    macos-defaults "https://github.com/brettz9/macOS-defaults#openwith"
-
-"macos-defaults@git+https://github.com/brettz9/macOS-defaults.git#openwith":
-  version "2.0.0"
-  resolved "git+https://github.com/brettz9/macOS-defaults.git#f57d4c8014232d65aedbe711257bd36a0aa902c0"
-  dependencies:
-    get-stream "^5.1.0"
 
 macos-release@^2.2.0:
   version "2.2.0"

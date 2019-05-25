@@ -1,5 +1,10 @@
-os:
-  - osx
+matrix:
+  include:
+    - os: osx
+      addons:
+        homebrew:
+          casks:
+            - google-chrome
 language: node_js
 node_js: node
 cache: yarn

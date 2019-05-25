@@ -3,6 +3,7 @@ matrix:
     - os: osx
       addons:
         homebrew:
+          update: true
           casks:
             - google-chrome
 language: node_js

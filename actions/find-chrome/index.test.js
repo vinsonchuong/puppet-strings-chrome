@@ -8,6 +8,8 @@ test('finding the path to a locally installed version of Chrome', async (t) => {
       await findChrome(),
       '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
     )
+  } else if (process.platform === 'linux' && process.env.CI) {
+    t.is(await findChrome(), '/usr/bin/google-chrome')
   } else if (process.platform === 'linux') {
     t.is(await findChrome(), '/usr/bin/chromium')
   } else {

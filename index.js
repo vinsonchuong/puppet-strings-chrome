@@ -1,4 +1,3 @@
-/* @flow */
-export { default as findChrome } from './actions/find-chrome'
-export { default as downloadChrome } from './actions/download-chrome'
-export { default as openChrome } from './actions/open-chrome'
+export {default as findChrome} from './actions/find-chrome/index.js'
+export {default as downloadChrome} from './actions/download-chrome/index.js'
+export {default as openChrome} from './actions/open-chrome/index.js'

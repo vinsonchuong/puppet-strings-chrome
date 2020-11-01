@@ -1,9 +1,8 @@
-/* @flow */
-import * as os from 'os'
-import * as path from 'path'
-import fs, { promises as fsp } from 'fs'
+import os from 'os'
+import path from 'path'
+import fs, {promises as fsp} from 'fs'
 
-export default async function(): Promise<?string> {
+export default async function () {
   const possiblePaths = []
 
   if (process.platform === 'darwin') {
@@ -27,9 +26,10 @@ export default async function(): Promise<?string> {
 
   for (const possiblePath of possiblePaths) {
     try {
+      // eslint-disable-next-line no-await-in-loop
       await fsp.access(possiblePath, fs.constants.R_OK | fs.constants.X_OK)
       return possiblePath
-    } catch (error) {}
+    } catch {}
   }
 
   return null

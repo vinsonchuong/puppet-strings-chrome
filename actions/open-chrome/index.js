@@ -1,9 +1,6 @@
-/* @flow */
-import { openBrowser } from 'puppet-strings'
-import { findChrome, downloadChrome } from '../../'
+import {openBrowser} from 'puppet-strings'
+import {findChrome, downloadChrome} from '../../index.js'
 
-export default async function<Options: *>(
-  options: Options
-): $Call<typeof openBrowser, string, Options> {
+export default async function (options) {
   return openBrowser((await findChrome()) || (await downloadChrome()), options)
 }

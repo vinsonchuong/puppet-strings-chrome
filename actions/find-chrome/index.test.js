@@ -1,9 +1,8 @@
-/* @flow */
 import test from 'ava'
-import { openBrowser, openTab, evalInTab } from 'puppet-strings'
-import findChrome from './'
+import {openBrowser, openTab, evalInTab} from 'puppet-strings'
+import findChrome from './index.js'
 
-test('finding the path to a locally installed version of Chrome', async t => {
+test('finding the path to a locally installed version of Chrome', async (t) => {
   if (process.platform === 'darwin') {
     t.is(
       await findChrome(),
@@ -18,7 +17,7 @@ test('finding the path to a locally installed version of Chrome', async t => {
   }
 })
 
-test('launching the locally installed version of Chrome', async t => {
+test('launching the locally installed version of Chrome', async (t) => {
   const chromePath = await findChrome()
   if (!chromePath) {
     return t.fail()

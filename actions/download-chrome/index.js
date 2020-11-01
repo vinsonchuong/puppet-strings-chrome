@@ -1,17 +1,15 @@
-/* @flow */
 import puppeteer from 'puppeteer-core'
-import puppeteerPackageJson from 'puppeteer-core/package.json'
-import * as os from 'os'
-import * as path from 'path'
+import os from 'os'
+import path from 'path'
 
-const chromiumVersion = puppeteerPackageJson.puppeteer.chromium_revision
+const chromiumVersion = puppeteer._preferredRevision
 
-export default async function(): Promise<string> {
+export default async function () {
   const browserFetcher = puppeteer.createBrowserFetcher({
     path: path.join(os.homedir(), '.chromium')
   })
 
-  const { executablePath } = await browserFetcher.download(chromiumVersion)
+  const {executablePath} = await browserFetcher.download(chromiumVersion)
 
   return executablePath
 }

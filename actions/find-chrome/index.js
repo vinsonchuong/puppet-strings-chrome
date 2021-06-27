@@ -1,6 +1,6 @@
-import os from 'os'
-import path from 'path'
-import fs, {promises as fsp} from 'fs'
+import os from 'node:os'
+import path from 'node:path'
+import fs, {promises as fsp} from 'node:fs'
 
 export default async function () {
   const possiblePaths = []

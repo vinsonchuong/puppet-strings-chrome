@@ -1,6 +1,6 @@
+import os from 'node:os'
+import path from 'node:path'
 import puppeteer from 'puppeteer-core'
-import os from 'os'
-import path from 'path'
 
 const chromiumVersion = puppeteer._preferredRevision
 

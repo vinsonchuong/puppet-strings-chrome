@@ -1,3 +1,4 @@
+import process from 'node:process'
 import test from 'ava'
 import {openBrowser, openTab, evalInTab} from 'puppet-strings'
 import findChrome from './index.js'
@@ -6,7 +7,7 @@ test('finding the path to a locally installed version of Chrome', async (t) => {
   if (process.platform === 'darwin') {
     t.is(
       await findChrome(),
-      '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+      '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
     )
   } else if (process.platform === 'linux') {
     t.is(await findChrome(), '/usr/bin/chromium')

@@ -6,7 +6,7 @@ const chromiumVersion = puppeteer._preferredRevision
 
 export default async function () {
   const browserFetcher = puppeteer.createBrowserFetcher({
-    path: path.join(os.homedir(), '.chromium')
+    path: path.join(os.homedir(), '.chromium'),
   })
 
   const {executablePath} = await browserFetcher.download(chromiumVersion)

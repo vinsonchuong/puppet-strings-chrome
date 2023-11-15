@@ -1,15 +1,23 @@
 import os from 'node:os'
 import path from 'node:path'
-import puppeteer from 'puppeteer-core'
-
-const chromiumVersion = puppeteer._preferredRevision
+import {
+  install,
+  Browser,
+  resolveBuildId,
+  detectBrowserPlatform,
+} from '@puppeteer/browsers'
+import {PUPPETEER_REVISIONS} from 'puppeteer-core/internal/revisions.js'
 
 export default async function () {
-  const browserFetcher = puppeteer.createBrowserFetcher({
-    path: path.join(os.homedir(), '.chromium'),
+  const result = await install({
+    cacheDir: path.join(os.homedir(), '.chromium'),
+    browser: Browser.CHROME,
+    buildId: await resolveBuildId(
+      Browser.CHROME,
+      detectBrowserPlatform(),
+      PUPPETEER_REVISIONS.chrome,
+    ),
   })
 
-  const {executablePath} = await browserFetcher.download(chromiumVersion)
-
-  return executablePath
+  return result.executablePath
 }

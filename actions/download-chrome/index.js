@@ -8,7 +8,7 @@ import {
 } from '@puppeteer/browsers'
 import {PUPPETEER_REVISIONS} from 'puppeteer-core/internal/revisions.js'
 
-export default async function () {
+export default async function downloadChrome() {
   const result = await install({
     cacheDir: path.join(os.homedir(), '.chromium'),
     browser: Browser.CHROME,

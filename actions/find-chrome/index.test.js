@@ -1,6 +1,6 @@
 import process from 'node:process'
 import test from 'ava'
-import {openBrowser, openTab, evalInTab} from 'puppet-strings'
+import {openBrowser, closeBrowser, openTab, evalInTab} from 'puppet-strings'
 import findChrome from './index.js'
 
 test('finding the path to a locally installed version of Chrome', async (t) => {
@@ -23,6 +23,10 @@ test('launching the locally installed version of Chrome', async (t) => {
   }
 
   const browser = await openBrowser(chromePath)
+  t.teardown(() => {
+    closeBrowser(browser)
+  })
+
   const tab = await openTab(browser, 'http://example.com')
   t.is(await evalInTab(tab, [], `return document.title`), 'Example Domain')
 })

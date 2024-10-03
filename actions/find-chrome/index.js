@@ -3,7 +3,7 @@ import os from 'node:os'
 import path from 'node:path'
 import fs, {promises as fsp} from 'node:fs'
 
-export default async function () {
+export default async function findChrome() {
   const possiblePaths = []
 
   if (process.platform === 'darwin') {
